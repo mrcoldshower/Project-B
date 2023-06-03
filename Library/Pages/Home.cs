@@ -5,7 +5,6 @@ public class HomePage : Page
     {
         string[] options = { "Login", "Create Account", "About", "Exit" };
         int choice = Navigate("Home page!", options);
-
         Page page = ChoosePage(choice);
         Router.PushPage(page);
         Router.ViewCurrentPage();

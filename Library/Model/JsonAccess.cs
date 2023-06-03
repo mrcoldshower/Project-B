@@ -7,7 +7,7 @@ public class JsonAccess<T>
 
     public JsonAccess(string path)
     {
-        Path = Directory.GetCurrentDirectory() + path;
+        Path = Directory.GetCurrentDirectory().Substring(0, Directory.GetCurrentDirectory().Length - 8) + @"\Library" + path;
     }
 
     public List<T> LoadAll()

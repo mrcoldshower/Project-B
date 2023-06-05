@@ -5,7 +5,7 @@ public abstract class Page
 {
     public virtual bool IsQuestionPage { get; set; } = false;
     public abstract void Display();
-    public abstract Page ChoosePage(int input);
+    public virtual Page ChoosePage(int input) { return null!; }
     public Dictionary<string, string> QuestionsAnswers { get; set; } = new Dictionary<string, string>();
 
     public int SelectedIndex;
@@ -49,9 +49,9 @@ public abstract class Page
             }
             else if (keyPressed == ConsoleKey.Enter || keyPressed == ConsoleKey.RightArrow || keyPressed == ConsoleKey.D)
             {
-                if (IsQuestionPage == true && options[SelectedIndex][0] != '[') // if page is to input data, and the option is not a create/finish button do this
+                string currentOption = options[SelectedIndex];
+                if (IsQuestionPage == true && currentOption[currentOption.Length - 1] == ':') // if page is to input data, and the option is not a create/finish button do this
                 {
-                    string currentOption = options[SelectedIndex];
                     Console.SetCursorPosition(currentOption.Length + 3, SelectedIndex + 1);
                     if (QuestionsAnswers.ContainsKey(currentOption)) QuestionsAnswers[currentOption] = ReadLine() ?? "";
                     else QuestionsAnswers.Add(currentOption, ReadLine() ?? "");
@@ -98,5 +98,11 @@ public abstract class Page
             WriteLine();
         }
         ResetColor();
+    }
+
+    public void AddToQuestionsAnswers(KeyValuePair<string, string> item)
+    {
+        if (!QuestionsAnswers.ContainsKey(item.Key)) QuestionsAnswers.Add(item.Key, item.Value);
+        else QuestionsAnswers[item.Key] = item.Value;
     }
 }

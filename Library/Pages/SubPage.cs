@@ -5,15 +5,16 @@ public class SubPage : Page
     public string Prompt { get; set; }
     public string[] Options { get; set; }
 
-    public SubPage(string prompt, string[] options)
+    public SubPage(string prompt, string[] options, bool isQuestionPage = true)
     {
         Prompt = prompt;
         Options = options;
+        IsQuestionPage = isQuestionPage;
     }
 
     public override void Display()
     {
-        Navigate(Prompt, Options);
+        Navigate(Prompt, Options, "", "");
         Router.Pop();
     }
 

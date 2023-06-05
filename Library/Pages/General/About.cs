@@ -5,8 +5,8 @@ public class AboutPage : Page
     {
         Console.WriteLine(@"About page!
 
-This online banking platform was created by Pablo Sanderman.
-This is just to practise object-orientated-design-programming (OODP).
+This is a reservation program for restaurants.
+This is to refactor the old program with object-orientated-design-programming (OODP) concepts.
 
 Keybinds:
 W / Up Arrow                => Go Up,

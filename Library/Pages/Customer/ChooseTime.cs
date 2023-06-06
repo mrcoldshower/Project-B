@@ -5,31 +5,27 @@ public class ChooseTimePage : Page
     public override bool IsQuestionPage { get; set; } = true;
     public override void Display()
     {
-        string[] options = TimeOnlyToString(GetTimes(5));
+        string[] options = TimeOnlyToString(GetTimes());
         int choice = Navigate("Choose a time:", options, "", "");
         QuestionsAnswers.Add("Time", options[choice]);
     }
 
-    public override Page ChoosePage(int input)
+    public static TimeOnly[] GetTimes()
     {
-        return null!;
-    }
-
-    public TimeOnly[] GetTimes(int amount)
-    {
-        Restaurant restaurant = new Restaurant();
-        TimeOnly[] nextDates = new TimeOnly[amount];
-
-        for (int i = 0; i < amount; i++)
+        Restaurant restaurant = Data.Restaurant;
+        int duration = (restaurant.CloseTime - restaurant.OpenTime).Hours + 1;
+        TimeOnly[] nextDates = new TimeOnly[duration];
+        TimeOnly start = restaurant.OpenTime;
+        for (int i = 0; i < nextDates.Length; i++)
         {
-            TimeOnly currentDate = TimeOnly.FromDateTime(DateTime.Now.Date.AddHours(i + 1));
-            nextDates[i] = currentDate;
+            nextDates[i] = start;
+            start = start.AddHours(1);
         }
 
         return nextDates;
     }
 
-    public string[] TimeOnlyToString(TimeOnly[] arr)
+    public static string[] TimeOnlyToString(TimeOnly[] arr)
     {
         string[] nextDates = new string[arr.Length];
 

@@ -40,8 +40,11 @@ public abstract class Page
             else if (keyPressed == ConsoleKey.LeftArrow || keyPressed == ConsoleKey.A)
             {
                 QuestionsAnswers.Clear();
-                Router.GoBack();
-                break;
+                if (Router.GetCount() > 1)
+                {
+                    Router.GoBack();
+                    break;
+                }
             }
             else if (keyPressed == ConsoleKey.Escape)
             {
@@ -77,7 +80,7 @@ public abstract class Page
 
             if (i == SelectedIndex)
             {
-                prefix = "*";
+                prefix = " ";
                 ForegroundColor = ConsoleColor.Black;
                 BackgroundColor = ConsoleColor.White;
 

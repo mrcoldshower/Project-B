@@ -5,19 +5,25 @@ public class ChooseDatePage : Page
     public override bool IsQuestionPage { get; set; } = true;
     public override void Display()
     {
-        string[] options = DateOnlyToString(GetDates(10));
+        string[] options = AddCustomString(DateOnlyToString(GetDates(amount: 7))); // amount: how many dates you want the user to pick from
         int choice = Navigate("Choose a date:", options, "", "");
-        QuestionsAnswers.Add("Date", options[choice]);
+        if (options[choice] == "[Create]")
+        {   // user made a custom date.
+            string customDate = QuestionsAnswers["Custom date:"];
+            QuestionsAnswers.Remove("Custom date:");
+            QuestionsAnswers.Add("Date", customDate);
+        }
+        else QuestionsAnswers.Add("Date", options[choice]);
     }
 
     public DateOnly[] GetDates(int amount)
     {
-        Restaurant restaurant = new Restaurant();
+        // Restaurant restaurant = new Restaurant(); // GET THE OPEN DAYS
         DateOnly[] nextDates = new DateOnly[amount];
 
         for (int i = 0; i < amount; i++)
         {
-            DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now.AddDays(i + 1));
+            DateOnly currentDate = DateOnly.FromDateTime(DateTime.Now.AddDays(i));
             nextDates[i] = currentDate;
         }
 
@@ -35,5 +41,14 @@ public class ChooseDatePage : Page
         }
 
         return nextDates;
+    }
+
+    public string[] AddCustomString(string[] arr)
+    {
+        List<string> list = arr.ToList();
+        list.Add("Custom date:");
+        list.Add("[Create]");
+        arr = list.ToArray();
+        return arr;
     }
 }

@@ -4,18 +4,39 @@ public class Program
 {
     public static void Main()
     {
-        Case1();
+        Customer();
     }
 
-    public static void Start()
+    public static void Customer()
     {
         HomePage homePage = new();
         Router.PushPage(homePage);
         Router.ViewCurrentPage();
     }
 
-    public static void Case1()
+    public static void Admin()
     {
-        Start();
+
+    }
+
+    public static void Waiter()
+    {
+
+    }
+
+    public static void RealMain(string[] args)
+    {
+        if (args.Length == 0)
+        {
+            Console.WriteLine("No arguments provided.");
+            return;
+        }
+
+        switch (args[0])
+        {
+            case "Customer": Customer(); break;
+            case "Admin": Admin(); break;
+            case "Waiter": Waiter(); break;
+        }
     }
 }

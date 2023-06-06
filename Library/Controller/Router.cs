@@ -4,7 +4,6 @@ using System.Collections;
 namespace Library;
 public class Router
 {
-    public static BankAccount? CurrentAccount;
     private static Stack<Page> Stack = new Stack<Page>();
 
     public static int GetCount()

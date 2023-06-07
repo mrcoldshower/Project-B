@@ -4,19 +4,22 @@ public class Program
 {
     public static void Main()
     {
-        Customer();
+        Console.CursorVisible = false;
+        Admin();
     }
 
     public static void Customer()
     {
-        HomePage homePage = new();
+        CustomerHomePage homePage = new();
         Router.PushPage(homePage);
         Router.ViewCurrentPage();
     }
 
     public static void Admin()
     {
-
+        AdminHomePage homePage = new();
+        Router.PushPage(homePage);
+        Router.ViewCurrentPage();
     }
 
     public static void Waiter()

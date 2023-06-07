@@ -55,10 +55,12 @@ public abstract class Page
                 string currentOption = options[SelectedIndex];
                 if (IsQuestionPage == true && currentOption[currentOption.Length - 1] == ':') // if page is to input data, and the option is not a create/finish button do this
                 {
+                    Console.CursorVisible = true;
                     Console.SetCursorPosition(currentOption.Length + 3, SelectedIndex + 1);
                     if (QuestionsAnswers.ContainsKey(currentOption)) QuestionsAnswers[currentOption] = ReadLine() ?? "";
                     else QuestionsAnswers.Add(currentOption, ReadLine() ?? "");
                     if (SelectedIndex < options.Count()) SelectedIndex += 1;
+                    Console.CursorVisible = false;
                 }
                 else
                 {

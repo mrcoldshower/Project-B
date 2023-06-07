@@ -1,5 +1,5 @@
 namespace Library;
-public class HomePage : Page
+public class CustomerHomePage : Page
 {
     public override void Display()
     {

@@ -110,4 +110,13 @@ public abstract class Page
         if (!QuestionsAnswers.ContainsKey(item.Key)) QuestionsAnswers.Add(item.Key, item.Value);
         else QuestionsAnswers[item.Key] = item.Value;
     }
+
+    public bool AreQuestionsFilled(string[] options)
+    {
+        foreach (var option in options)
+        {
+            if (!QuestionsAnswers.ContainsKey(option) && option[0] != '[') return false;
+        }
+        return true;
+    }
 }

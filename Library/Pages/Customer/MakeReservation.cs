@@ -57,19 +57,11 @@ public class MakeReservationPage : Page
         return page;
     }
 
-    public bool AreQuestionsFilled(string[] options)
-    {
-        foreach (var option in options)
-        {
-            if (!QuestionsAnswers.ContainsKey(option) && option[0] != '[') return false;
-        }
-        return true;
-    }
-
     public ValueTuple<bool, string> AreValidInputs(string[] options)
     {
         string errorMessage;
-        if (!int.TryParse(QuestionsAnswers[options[0]], out int quantity) || quantity > 100) // a 100 people reservation is a good max capacity in my opinion
+        int maxCap = Data.Restaurant.TwoPersonTables + Data.Restaurant.FourPersonTables + Data.Restaurant.SixPersonTables + Data.Restaurant.BarChairs;
+        if (!int.TryParse(QuestionsAnswers[options[0]], out int quantity) || quantity > maxCap)
         {
             errorMessage = quantity > 100 ? "You can't reservate for more than 100 people online." : "Quantity people has to be a number.";
             return ValueTuple.Create(false, errorMessage);

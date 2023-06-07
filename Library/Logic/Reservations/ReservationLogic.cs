@@ -41,8 +41,16 @@ public static class ReservationLogic
 
     public static void AddReservation(Reservation reservation)
     {
-        List<Reservation> reservations = Data.ReservationAccess.LoadAll();
+        List<Reservation> reservations = Data.Reservations;
         reservations.Add(reservation);
+        Data.ReservationAccess.WriteAll(reservations);
+        Data.Reservations = Data.ReservationAccess.LoadAll();
+    }
+
+    public static void RemoveReservation(Reservation reservation)
+    {
+        List<Reservation> reservations = Data.ReservationAccess.LoadAll();
+        reservations.Remove(reservation);
         Data.ReservationAccess.WriteAll(reservations);
     }
 
@@ -60,5 +68,10 @@ public static class ReservationLogic
         {
             AddReservation(CreateReservation(random.Next(1, 8), date, time, "test", "123", "test@test.com"));
         }
+    }
+
+    public static Reservation? FindReservation(Predicate<Reservation> predicate)
+    {
+        return Data.Reservations.Find(predicate);
     }
 }

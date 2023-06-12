@@ -65,7 +65,7 @@ public class RemoveItem : Page
 
         for (int i = 0; i < objects.Count; i++)
         {
-            int j = i++;
+            int j = i + 1;
             objects[i].Id = j;
         }
 

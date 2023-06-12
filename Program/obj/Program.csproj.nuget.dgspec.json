@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Program\\Program.csproj": {}
+    "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Program\\Program.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\Library.csproj": {
+    "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\obj\\",
+        "projectPath": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\Basic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,34 +61,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Program\\Program.csproj": {
+    "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Program\\Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Program\\Program.csproj",
+        "projectUniqueName": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Program\\Program.csproj",
         "projectName": "Program",
-        "projectPath": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Program\\Program.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Program\\obj\\",
+        "projectPath": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Program\\Program.csproj",
+        "packagesPath": "C:\\Users\\Basic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Program\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Basic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\Library.csproj": {
-                "projectPath": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\Library.csproj"
+              "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\Library.csproj": {
+                "projectPath": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\Library.csproj"
               }
             }
           }
@@ -116,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

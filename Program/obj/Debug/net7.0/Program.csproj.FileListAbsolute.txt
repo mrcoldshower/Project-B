@@ -17,3 +17,22 @@ C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\
 C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Program\obj\Debug\net7.0\Program.pdb
 C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Program\obj\Debug\net7.0\Program.genruntimeconfig.cache
 C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Program\obj\Debug\net7.0\ref\Program.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Program.exe
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Program.deps.json
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Program.runtimeconfig.json
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Program.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Program.pdb
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Library.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\bin\Debug\net7.0\Library.pdb
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.csproj.AssemblyReference.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.AssemblyInfoInputs.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.AssemblyInfo.cs
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.csproj.CoreCompileInputs.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.csproj.CopyComplete
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\refint\Program.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.pdb
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\Program.genruntimeconfig.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Program\obj\Debug\net7.0\ref\Program.dll

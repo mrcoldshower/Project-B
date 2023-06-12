@@ -10,7 +10,7 @@ public abstract class Page
 
     public int SelectedIndex;
 
-    public virtual int Navigate(string prompt, string[] options, string before = "<< ", string after = " >>")
+    public virtual int Navigate(string prompt, string[] options, string before = "", string after = "")
     {
         ConsoleKey keyPressed;
         do
@@ -56,9 +56,8 @@ public abstract class Page
                 if (IsQuestionPage == true && currentOption[currentOption.Length - 1] == ':') // if page is to input data, and the option is not a create/finish button do this
                 {
                     Console.CursorVisible = true;
-                    Console.SetCursorPosition(currentOption.Length + 3, SelectedIndex + 1);
-                    if (QuestionsAnswers.ContainsKey(currentOption)) QuestionsAnswers[currentOption] = ReadLine() ?? "";
-                    else QuestionsAnswers.Add(currentOption, ReadLine() ?? "");
+                    Console.SetCursorPosition(currentOption.Length + 3, SelectedIndex + 1 + prompt.Count(c => c == '\n'));
+                    WriteAnswer(currentOption);
                     if (SelectedIndex < options.Count()) SelectedIndex += 1;
                     Console.CursorVisible = false;
                 }
@@ -70,6 +69,19 @@ public abstract class Page
         } while (true); // keyPressed != ConsoleKey.Enter && keyPressed != ConsoleKey.RightArrow && keyPressed != ConsoleKey.D
 
         return SelectedIndex;
+    }
+
+    public void WriteAnswer(string currentOption)
+    {
+        string answer = ReadLine() ?? "";
+        if (QuestionsAnswers.ContainsKey(currentOption))
+        {
+            QuestionsAnswers[currentOption] = answer;
+        }
+        else
+        {
+            QuestionsAnswers.Add(currentOption, answer);
+        }
     }
 
     public virtual void DisplayOptions(string prompt, string[] options, string before, string after) // before and after are what kind of decorations you want on the options menu
@@ -113,10 +125,11 @@ public abstract class Page
 
     public bool AreQuestionsFilled(string[] options)
     {
+        bool filled = true;
         foreach (var option in options)
         {
-            if (!QuestionsAnswers.ContainsKey(option) && option[0] != '[') return false;
+            if (!QuestionsAnswers.ContainsKey(option) && option[option.Length - 1] == ':') filled = false;
         }
-        return true;
+        return filled;
     }
 }

@@ -16,9 +16,9 @@ public class Food : IHasID, IHasName
     public string Description { get; set; }
 
     [JsonPropertyName("category")]
-    public string Category { get; set; }
+    public FoodCategory Category { get; set; }
 
-    public Food(int id, string name, double price, string description, string category)
+    public Food(int id, string name, double price, string description, FoodCategory category)
     {
         Id = id;
         Name = name;

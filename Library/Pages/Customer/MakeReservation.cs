@@ -6,7 +6,7 @@ public class MakeReservationPage : Page
     public override void Display()
     {
         string[] options = new string[] { "Quantity people:", "Date", "Time", "Name:", "Phone Number:", "E-mailaddress:", "[Make Reservation]" };
-        int choice = Navigate("Make a reservation:", options, "", "");
+        int choice = Navigate("Make a reservation:", options);
         if (choice == 1 || choice == 2) // summary: for the options Date and Time, their answers get added to this pages QuestionsAnswers Dictionary.
         {
             Page page = ChoosePage(choice);
@@ -17,16 +17,17 @@ public class MakeReservationPage : Page
         }
         // Starts with verifying if Reservation can be made.
         bool filled = AreQuestionsFilled(options);
+        Utils.Debug(this.ToString()!);
         if (filled == false)
         {
             Utils.Debug("The user has not filled in all the required input fields yet.");
-            Display();
+            Display(); return;
         }
         ValueTuple<bool, string> valid = AreValidInputs(options);
         if (valid.Item1 == false)
         {
             Utils.Debug(valid.Item2);
-            Display();
+            Display(); return;
         }
         // algorithm starts
         Reservation reservation = ReservationLogic.CreateReservation(int.Parse(QuestionsAnswers["Quantity people:"]), DateOnly.Parse(QuestionsAnswers["Date"]),
@@ -39,7 +40,7 @@ public class MakeReservationPage : Page
             Router.Pop(); // pops ChooseSuggestionPage
             QuestionsAnswers["Time"] = newTime.ToString();
             Utils.Debug("Your chosen time has changed. Reservation is ready to be made. Try again!");
-            Display();
+            Display(); return;
         }
         ReservationLogic.AddReservation(reservation);
         Utils.Debug($"Congratulations! Your reservation has been made.\nYour reservation code is: {reservation.ReservationCode}");

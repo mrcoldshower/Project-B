@@ -4,7 +4,7 @@ public class AdminHomePage : Page
     public override void Display()
     {
         string[] options = { "Change Menu Card", "Change Restaurant Info", "Exit" };
-        int choice = Navigate("Admin page!", options);
+        int choice = Navigate("Admin page!", options, "<< ", " >>");
         Page page = ChoosePage(choice);
         Router.PushPage(page);
         Router.ViewCurrentPage();

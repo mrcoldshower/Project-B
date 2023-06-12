@@ -14,7 +14,7 @@ public class ChooseSuggestionPage : Page
 
     public override void Display()
     {
-        int choice = Navigate(Prompt, Options, "", "");
+        int choice = Navigate(Prompt, Options);
         QuestionsAnswers.Add("Suggestion", Options[choice]);
     }
 }

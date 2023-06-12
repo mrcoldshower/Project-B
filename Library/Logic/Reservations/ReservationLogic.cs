@@ -74,4 +74,12 @@ public static class ReservationLogic
     {
         return Data.Reservations.Find(predicate);
     }
+
+    public static void RemoveOldReservations()
+    {
+        List<Reservation> reservations = Data.Reservations;
+        reservations = reservations.Where(x => x.Date > DateOnly.FromDateTime(DateTime.Now).AddMonths(-1)).ToList();
+        Data.ReservationAccess.WriteAll(reservations);
+        Data.Reservations = reservations;
+    }
 }

@@ -10,12 +10,18 @@ public class Order : IHasID
     public List<Food> FoodList { get; set; }
 
     [JsonPropertyName("totalPrice")]
-    private double _totalPrice;
-    public double TotalPrice { get { return _totalPrice; } set { _totalPrice = FoodList.Select(x => x.Price).Sum(); } }
+    public double TotalPrice { get; set; }
 
     public Order(int id, List<Food> foodList)
     {
         Id = id;
         FoodList = foodList;
+        TotalPrice = foodList.Select(x => x.Price).Sum();
+    }
+
+    public bool Equals(Order? o)
+    {
+        if (o == null) return false;
+        return Id == o.Id && FoodList == o.FoodList && TotalPrice == o.TotalPrice;
     }
 }

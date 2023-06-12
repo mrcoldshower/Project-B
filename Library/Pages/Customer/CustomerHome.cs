@@ -4,7 +4,7 @@ public class CustomerHomePage : Page
     public override void Display()
     {
         string[] options = { "Make Reservation", "Cancel Reservation", "Menu Card", "About", "Exit" };
-        int choice = Navigate("Home page!", options);
+        int choice = Navigate("Home page!", options, "<< ", " >>");
         Page page = ChoosePage(choice);
         Router.PushPage(page);
         Router.ViewCurrentPage();

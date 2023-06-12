@@ -1,1 +1,72 @@
-[]
+[
+    {
+        "id": 1,
+        "name": "Cheeseburger",
+        "price": 9.99,
+        "description": "Juicy beef patty topped with melted cheese, served on a toasted bun.",
+        "category": "Burgers"
+    },
+    {
+        "id": 2,
+        "name": "Margherita Pizza",
+        "price": 12.99,
+        "description": "Classic pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves.",
+        "category": "Pizza"
+    },
+    {
+        "id": 3,
+        "name": "Caesar Salad",
+        "price": 7.99,
+        "description": "Crisp romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+        "category": "Salads"
+    },
+    {
+        "id": 4,
+        "name": "Chicken Alfredo",
+        "price": 14.99,
+        "description": "Grilled chicken breast served on a bed of creamy Alfredo pasta.",
+        "category": "Pasta"
+    },
+    {
+        "id": 5,
+        "name": "Fish and Chips",
+        "price": 10.99,
+        "description": "Crispy battered fish fillets served with golden fries.",
+        "category": "Seafood"
+    },
+    {
+        "id": 6,
+        "name": "Miso Soup",
+        "price": 4.99,
+        "description": "Traditional Japanese soup made with miso paste, tofu, and seaweed.",
+        "category": "Soups"
+    },
+    {
+        "id": 7,
+        "name": "Taco Salad",
+        "price": 8.99,
+        "description": "Crispy tortilla shell filled with lettuce, seasoned ground beef, cheese, tomatoes, and salsa.",
+        "category": "Mexican"
+    },
+    {
+        "id": 8,
+        "name": "Sushi Platter",
+        "price": 19.99,
+        "description": "Assortment of fresh sushi rolls, sashimi, and nigiri sushi.",
+        "category": "Japanese"
+    },
+    {
+        "id": 9,
+        "name": "Chicken Shawarma",
+        "price": 11.99,
+        "description": "Thinly sliced marinated chicken wrapped in a warm pita with garlic sauce and veggies.",
+        "category": "Middle Eastern"
+    },
+    {
+        "id": 10,
+        "name": "Chocolate Brownie",
+        "price": 5.99,
+        "description": "Rich and fudgy chocolate brownie topped with a scoop of vanilla ice cream.",
+        "category": "Desserts"
+    }
+]

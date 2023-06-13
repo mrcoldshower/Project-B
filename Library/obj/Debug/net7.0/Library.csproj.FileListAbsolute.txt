@@ -10,3 +10,15 @@ C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\
 C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Library\obj\Debug\net7.0\refint\Library.dll
 C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Library\obj\Debug\net7.0\Library.pdb
 C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Library\obj\Debug\net7.0\ref\Library.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\bin\Debug\net7.0\Library.deps.json
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\bin\Debug\net7.0\Library.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\bin\Debug\net7.0\Library.pdb
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.csproj.AssemblyReference.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.AssemblyInfoInputs.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.AssemblyInfo.cs
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.csproj.CoreCompileInputs.cache
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\refint\Library.dll
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\Library.pdb
+C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\obj\Debug\net7.0\ref\Library.dll

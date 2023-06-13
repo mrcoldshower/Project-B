@@ -13,4 +13,18 @@ public class RestaurantLogic
         Restaurant restaurant = new Restaurant("Andre", openTime, closeTime, twoPT, fourPT, sixPT, barChairs);
         Data.RestaurantAccess.WriteItem(restaurant);
     }
+
+    public static void ChangeRestaurant(string name, TimeOnly openTime, TimeOnly closeTime, int twoPT, int fourPT, int sixPT, int barChairs)
+    {
+        Restaurant restaurant = Data.Restaurant;
+        restaurant.Name = name;
+        restaurant.OpenTime = openTime;
+        restaurant.CloseTime = closeTime;
+        restaurant.TwoPersonTables = twoPT;
+        restaurant.FourPersonTables = fourPT;
+        restaurant.SixPersonTables = sixPT;
+        restaurant.BarChairs = barChairs;
+        Data.RestaurantAccess.WriteItem(restaurant);
+        Data.Restaurant = restaurant;
+    }
 }

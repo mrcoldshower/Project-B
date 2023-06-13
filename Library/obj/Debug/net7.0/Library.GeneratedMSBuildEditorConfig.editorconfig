@@ -8,8 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Library
-<<<<<<< HEAD
-build_property.ProjectDir = c:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Library\
-=======
-build_property.ProjectDir = C:\Users\Basic\OneDrive\Desktop\Pablo\RefactoringForFun\Library\
->>>>>>> e6ad70bed206e880935c02e1fed38ce8f3673ab2
+build_property.ProjectDir = C:\Users\pablo\OneDrive\Documents\College\Developments\C# Folders\MyOwnPrograms\RefactoringForFun\Library\

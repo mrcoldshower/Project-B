@@ -2,7 +2,7 @@ namespace Library;
 
 using Newtonsoft.Json;
 
-public class RemoveItem : Page
+public class RemoveItemPage : Page
 {
     public override bool IsQuestionPage { get; set; } = true;
     public override void Display()
@@ -11,10 +11,9 @@ public class RemoveItem : Page
             "ID:",
             "[Remove item]"
         };
-        int choice = Navigate("What item do you want to delete?", options, "", "");
+        int choice = Navigate("What item do you want to delete?", options);
 
         // Starts with verifying if item can be removed.
-        AddToQuestionsAnswers(QuestionsAnswers.FirstOrDefault());
         bool filled = AreQuestionsFilled(options);
         if (filled == false)
         {
@@ -40,16 +39,14 @@ public class RemoveItem : Page
             Utils.Debug("An unknown error has occured. Please try again.");
             Router.GoBack();
         }
-        
-    }
 
-    private List<Food> GetAllJsonRecords() => JsonConvert.DeserializeObject<List<Food>>(File.ReadAllText("../Library/Data/food.json"))!;
+    }
 
     private bool IsDeleted(int id)
     {
-        List<Food> objects = GetAllJsonRecords();
+        List<Food> objects = Data.Foods;
 
-        Food objectToRemove = objects.Find(o => o.Id == id);
+        Food objectToRemove = objects.Find(o => o.Id == id)!;
         if (objectToRemove != null)
         {
             try
@@ -69,34 +66,21 @@ public class RemoveItem : Page
             objects[i].Id = j;
         }
 
-        File.WriteAllText("../Library/Data/food.json", JsonConvert.SerializeObject(objects));
+        Data.FoodAccess.WriteAll(objects);
+        Data.Foods = objects;
         return true;
     }
 
     public ValueTuple<bool, string> IsValidInput(string[] options)
     {
         string errorMessage;
-        int ItemCount = GetAllJsonRecords().Count;
-        if (!int.TryParse(QuestionsAnswers[options[0]], out int id) || id > GetAllJsonRecords().Count) // a 100 people reservation is a good max capacity in my opinion
+        int ItemCount = Data.Foods.Count;
+        if (!int.TryParse(QuestionsAnswers[options[0]], out int id) || id > Data.Foods.Count) // a 100 people reservation is a good max capacity in my opinion
         {
             errorMessage = id > ItemCount ? "Invalid ID." : "ID has to be a number.";
             return ValueTuple.Create(false, errorMessage);
         }
-        
+
         return ValueTuple.Create(true, "");
-    }
-
-    public bool AreQuestionsFilled(string[] options)
-    {
-        foreach (var option in options)
-        {
-            if (!QuestionsAnswers.ContainsKey(option) && option[0] != '[') return false;
-        }
-        return true;
-    }
-
-    public override Page ChoosePage(int input)
-    {
-        return null!;
     }
 }

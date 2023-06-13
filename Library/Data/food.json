@@ -1,72 +1,72 @@
 [
-    {
-      "Id": 1,
-      "Name": "Salmon",
-      "Price": 10.99,
-      "Description": "Fresh Norwegian salmon fillet",
-      "Category": "Fish"
-    },
-    {
-      "Id": 2,
-      "Name": "Shicken Breast",
-      "Price": 6.99,
-      "Description": "Boneless and skinless chicken breast",
-      "Category": "Meat"
-    },
-    {
-      "Id": 3,
-      "Name": "Tofu Stir-Fry",
-      "Price": 8.49,
-      "Description": "A delicious stir-fry with tofu and vegetables",
-      "Category": "Vegan"
-    },
-    {
-      "Id": 4,
-      "Name": "Vegetable Curry",
-      "Price": 9.99,
-      "Description": "A flavorful curry with mixed vegetables",
-      "Category": "Vegetarian"
-    },
-    {
-      "Id": 5,
-      "Name": "Beef Burger",
-      "Price": 7.99,
-      "Description": "Juicy beef patty with lettuce, tomato, and cheese",
-      "Category": "Meat"
-    },
-    {
-      "Id": 6,
-      "Name": "Grilled Shrimp",
-      "Price": 12.99,
-      "Description": "Freshly grilled shrimp skewers",
-      "Category": "Fish"
-    },
-    {
-      "Id": 7,
-      "Name": "Mushroom Risotto",
-      "Price": 11.49,
-      "Description": "Creamy risotto with sautéed mushrooms",
-      "Category": "Vegetarian"
-    },
-    {
-      "Id": 8,
-      "Name": "Quinoa Salad",
-      "Price": 8.99,
-      "Description": "A healthy salad with quinoa, mixed greens, and vegetables",
-      "Category": "Vegan"
-    },
-    {
-      "Id": 9,
-      "Name": "Lamb Chops",
-      "Price": 14.99,
-      "Description": "Grilled lamb chops with a minty glaze",
-      "Category": "Meat"
-    },
-    {
-      "Id": 10,
-      "Name": "Eggplant Parmesan",
-      "Price": 10.49,
-      "Description": "Breaded and baked eggplant topped with tomato sauce and cheese",
-      "Category": "Vegetarian"
-    }
-  ]
+  {
+    "Id": 1,
+    "Name": "Salmon",
+    "Price": 10.99,
+    "Description": "Fresh Norwegian salmon fillet",
+    "Category": 0
+  },
+  {
+    "Id": 2,
+    "Name": "Shicken Breast",
+    "Price": 6.99,
+    "Description": "Boneless and skinless chicken breast",
+    "Category": 1
+  },
+  {
+    "Id": 3,
+    "Name": "Tofu Stir-Fry",
+    "Price": 8.49,
+    "Description": "A delicious stir-fry with tofu and vegetables",
+    "Category": 2
+  },
+  {
+    "Id": 4,
+    "Name": "Vegetable Curry",
+    "Price": 9.99,
+    "Description": "A flavorful curry with mixed vegetables",
+    "Category": 3
+  },
+  {
+    "Id": 5,
+    "Name": "Beef Burger",
+    "Price": 7.99,
+    "Description": "Juicy beef patty with lettuce, tomato, and cheese",
+    "Category": 1
+  },
+  {
+    "Id": 6,
+    "Name": "Grilled Shrimp",
+    "Price": 12.99,
+    "Description": "Freshly grilled shrimp skewers",
+    "Category": 0
+  },
+  {
+    "Id": 7,
+    "Name": "Mushroom Risotto",
+    "Price": 11.49,
+    "Description": "Creamy risotto with sautéed mushrooms",
+    "Category": 3
+  },
+  {
+    "Id": 8,
+    "Name": "Quinoa Salad",
+    "Price": 8.99,
+    "Description": "A healthy salad with quinoa, mixed greens, and vegetables",
+    "Category": 2
+  },
+  {
+    "Id": 9,
+    "Name": "Lamb Chops",
+    "Price": 14.99,
+    "Description": "Grilled lamb chops with a minty glaze",
+    "Category": 3
+  },
+  {
+    "Id": 10,
+    "Name": "Eggplant Parmesan",
+    "Price": 10.49,
+    "Description": "Breaded and baked eggplant topped with tomato sauce and cheese",
+    "Category": 2
+  }
+]

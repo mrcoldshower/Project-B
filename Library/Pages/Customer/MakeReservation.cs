@@ -17,7 +17,6 @@ public class MakeReservationPage : Page
         }
         // Starts with verifying if Reservation can be made.
         bool filled = AreQuestionsFilled(options);
-        Utils.Debug(this.ToString()!);
         if (filled == false)
         {
             Utils.Debug("The user has not filled in all the required input fields yet.");

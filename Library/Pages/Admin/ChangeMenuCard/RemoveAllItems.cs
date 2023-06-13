@@ -1,5 +1,5 @@
 namespace Library;
-public class ChangeRestaurantInfoPage : Page
+public class RemoveAllItemsPage : Page
 {
     public override void Display()
     {

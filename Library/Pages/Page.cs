@@ -73,7 +73,7 @@ public abstract class Page
 
     public void WriteAnswer(string currentOption)
     {
-        string answer = ReadLine() ?? "";
+        string answer = ReadLine() ?? "".TrimEnd();
         if (QuestionsAnswers.ContainsKey(currentOption))
         {
             QuestionsAnswers[currentOption] = answer;

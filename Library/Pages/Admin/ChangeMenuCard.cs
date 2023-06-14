@@ -23,7 +23,7 @@ public class ChangeMenuCardPage : Page
             case 0: break;
             case 1: page = new RemoveItem(); break;
             case 2: break;
-            case 3: break;
+            case 3: page = new RemoveAllItems(); break;
         }
         return page;
     }

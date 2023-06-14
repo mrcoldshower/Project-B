@@ -45,9 +45,9 @@ public class RemoveItem : Page
 
     private List<Food> GetAllJsonRecords() => JsonConvert.DeserializeObject<List<Food>>(File.ReadAllText("../Library/Data/food.json"))!;
 
-    private bool IsDeleted(int id)
+    public bool IsDeleted(int id)
     {
-        List<Food> objects = GetAllJsonRecords();
+        List<Food> objects = Data.Foods;
 
         Food objectToRemove = objects.Find(o => o.Id == id);
         if (objectToRemove != null)
@@ -69,15 +69,16 @@ public class RemoveItem : Page
             objects[i].Id = j;
         }
 
-        File.WriteAllText("../Library/Data/food.json", JsonConvert.SerializeObject(objects));
+        Data.FoodAccess.WriteAll(objects);
+        Data.Foods = objects;
         return true;
     }
 
     public ValueTuple<bool, string> IsValidInput(string[] options)
     {
         string errorMessage;
-        int ItemCount = GetAllJsonRecords().Count;
-        if (!int.TryParse(QuestionsAnswers[options[0]], out int id) || id > GetAllJsonRecords().Count) // a 100 people reservation is a good max capacity in my opinion
+        int ItemCount = Data.Foods.Count;
+        if (!int.TryParse(QuestionsAnswers[options[0]], out int id) || id > Data.Foods.Count) // a 100 people reservation is a good max capacity in my opinion
         {
             errorMessage = id > ItemCount ? "Invalid ID." : "ID has to be a number.";
             return ValueTuple.Create(false, errorMessage);

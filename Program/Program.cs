@@ -5,7 +5,7 @@ public class Program
     public static void Main()
     {
         Console.CursorVisible = false;
-        Customer();
+        Admin();
     }
 
     public static void Customer()

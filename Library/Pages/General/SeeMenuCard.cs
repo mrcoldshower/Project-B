@@ -4,20 +4,20 @@ using Newtonsoft.Json;
 
 public class SeeMenuCardPage : Page
 {
-    private const int PageSize = 15;
+    private const int PageSize = 10;
     private static int currentPageIndex = 0;
-    private static dynamic[] jsonData;
+    
 
     public override void Display()
     {
-        LoadJsonData(); 
+        
         ShowCurrentPage(); 
 
         while (true)
         {
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
 
-            if (keyInfo.Key == ConsoleKey.RightArrow && currentPageIndex <= jsonData.Count())
+            if (keyInfo.Key == ConsoleKey.RightArrow && currentPageIndex <= Data.Foods.Count)
             {
                 currentPageIndex++;
                 ShowCurrentPage();
@@ -35,19 +35,13 @@ public class SeeMenuCardPage : Page
         
     }
 
-    private static void LoadJsonData()
-    {
-        string jsonFilePath = "../Library/Data/food.json";
-        string jsonDataString = File.ReadAllText(jsonFilePath);
-        jsonData = JsonConvert.DeserializeObject<dynamic[]>(jsonDataString);
-    }
 
     private static void ShowCurrentPage()
     {
         int startIndex = currentPageIndex * PageSize;
         int endIndex = startIndex + PageSize;
 
-        if (startIndex >= jsonData.Length)
+        if (startIndex >= Data.Foods.Count)
         {
             Console.WriteLine("No more pages left.");
             return;
@@ -56,9 +50,9 @@ public class SeeMenuCardPage : Page
         Console.Clear();
         Console.WriteLine($"Page {currentPageIndex + 1}:\n");
 
-        for (int i = startIndex; i < endIndex && i < jsonData.Length; i++)
+        for (int i = startIndex; i < endIndex && i < Data.Foods.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {jsonData[i].name} | {jsonData[i].description} | ${jsonData[i].price}");
+            Console.WriteLine($"{i + 1}. {Data.Foods[i].Name} | {Data.Foods[i].Description} | ${Data.Foods[i].Price}");
         }
 
         if (currentPageIndex >= endIndex)

@@ -57,16 +57,23 @@
   },
   {
     "Id": 9,
-    "Name": "Lamb Chops",
-    "Price": 14.99,
-    "Description": "Grilled lamb chops with a minty glaze",
-    "Category": 3
-  },
-  {
-    "Id": 10,
     "Name": "Eggplant Parmesan",
     "Price": 10.49,
     "Description": "Breaded and baked eggplant topped with tomato sauce and cheese",
     "Category": 2
+  },
+  {
+    "Id": 10,
+    "Name": "Spaghetti",
+    "Price": 10.0,
+    "Description": "good",
+    "Category": 3
+  },
+  {
+    "Id": 11,
+    "Name": "Spaghetti",
+    "Price": 10.0,
+    "Description": "god",
+    "Category": 3
   }
 ]

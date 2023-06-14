@@ -115,6 +115,16 @@ public abstract class Page
             WriteLine();
         }
         ResetColor();
+        if (this.GetType() == typeof(CustomerHomePage))
+        {
+            Console.WriteLine(@"
+Keybinds:
+W / Up Arrow                => Go Up,
+A / Left Arrow              => Go Back,
+S / Down Arrow              => Go Down,
+D / Right Arrow / Enter     => Select
+Escape                      => Exit program");
+        }
     }
 
     public void AddToQuestionsAnswers(KeyValuePair<string, string> item)

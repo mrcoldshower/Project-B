@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "erSZjQcgfhqcwDJnMuZLzVgGMyWBfbisWWsVr7APEU39aKW8RUfFLVtR9hUEigAEsCqHGz/c3BSvsKx/K/WNsg==",
+  "dgSpecHash": "y5TLXmwitIf/76U2xuaEwgpdtoVE9lkoB0jGJPwZMNzh6y7zShn+XDESnwwP5kOl3mHuc8YvPq9sFRCj16HunQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pablo\\OneDrive\\Documents\\College\\Developments\\C# Folders\\MyOwnPrograms\\RefactoringForFun\\Library\\Library.csproj",
+  "projectFilePath": "C:\\Users\\Basic\\OneDrive\\Desktop\\Pablo\\RefactoringForFun\\Library\\Library.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\pablo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\Basic\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

@@ -10,7 +10,6 @@ public class ChangeMenuCardPage : Page
             "Remove all items"
         };
         int choice = Navigate("Menu Options!", options, "<< ", " >>");
-        int choice = Navigate("Menu Options!", options, "<< ", " >>");
         Page page = ChoosePage(choice);
         Router.PushPage(page);
         Router.ViewCurrentPage();

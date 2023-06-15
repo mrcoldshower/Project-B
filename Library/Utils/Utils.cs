@@ -28,7 +28,7 @@ public static class Utils
 
     public static void Debug(string message)
     {
-        Console.WriteLine($"Debug: {message}");
+        Console.WriteLine($"* {message}");
         Console.ReadKey(true);
     }
 }

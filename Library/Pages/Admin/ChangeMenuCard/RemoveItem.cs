@@ -42,7 +42,7 @@ public class RemoveItemPage : Page
 
     }
 
-    private bool IsDeleted(int id)
+    public bool IsDeleted(int id)
     {
         List<Food> objects = Data.Foods;
 

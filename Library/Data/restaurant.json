@@ -1,9 +1,10 @@
 {
-  "Name": "Andre",
+  "Name": "Andrej",
   "OpenTime": "16:00:00",
   "CloseTime": "20:00:00",
   "TwoPersonTables": 8,
   "FourPersonTables": 5,
   "SixPersonTables": 2,
-  "BarChairs": 8
+  "BarChairs": 10,
+  "AboutDescription": "About page\nHello\nHaha\nHoi\n"
 }

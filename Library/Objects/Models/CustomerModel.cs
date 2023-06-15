@@ -10,12 +10,13 @@ public class Customer : IHasID
     public List<Table> Tables { get; set; }
 
     [JsonPropertyName("orderId")]
-    public int OrderId { get; set; }
+    public List<int> OrderIds { get; set; }
 
     public Customer(int id, List<Table> tables)
     {
         Id = id;
         Tables = tables;
+        OrderIds = new();
     }
 }
 

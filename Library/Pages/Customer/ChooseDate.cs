@@ -6,12 +6,25 @@ public class ChooseDatePage : Page
     public override void Display()
     {
         string[] options = AddCustomString(DateOnlyToString(GetDates(amount: 7))); // amount: how many dates you want the user to pick from
-        int choice = Navigate("Choose a date:", options, "", "");
+        int choice = Navigate("Choose a date:", options);
         if (options[choice] == "[Create]")
         {   // user made a custom date.
+            bool filled = AreQuestionsFilled(options);
+            if (filled == false)
+            {
+                Utils.Debug("The user has not filled in all the required input fields yet.");
+                Display();
+                return;
+            }
+            Utils.Debug("--");
             string customDate = QuestionsAnswers["Custom date:"];
-            QuestionsAnswers.Remove("Custom date:");
-            QuestionsAnswers.Add("Date", customDate);
+            Utils.Debug(customDate);
+            if (QuestionsAnswers.ContainsKey("Custom date:"))
+            {
+                QuestionsAnswers["Date"] = customDate;
+                QuestionsAnswers.Remove("Custome date:");
+            }
+            else QuestionsAnswers.Add("Date", customDate);
         }
         else QuestionsAnswers.Add("Date", options[choice]);
     }

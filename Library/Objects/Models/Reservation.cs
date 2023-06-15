@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 
 namespace Library;
-public class Reservation : IHasID, IHasName
+public class Reservation : IHasID, IHasName, IEquatable<Reservation>
 {
     [JsonPropertyName("id")]
     public int Id { get; set; }
@@ -44,5 +44,13 @@ public class Reservation : IHasID, IHasName
     public override string ToString()
     {
         return $"ID: {Id}, QuantityPeople: {QuantityPeople}, Date: {Date}, Time: {Time}, CustomerName: {Name}, ReservationCode: {ReservationCode}";
+    }
+
+    public bool Equals(Reservation? r)
+    {
+        if (r == null) return false;
+        return Id == r.Id && QuantityPeople == r.QuantityPeople && Date == r.Date
+            && Time == r.Time && Name == r.Name && PhoneNumber == r.PhoneNumber
+            && Email == r.Email && ReservationCode == r.ReservationCode;
     }
 }

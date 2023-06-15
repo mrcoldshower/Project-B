@@ -50,6 +50,7 @@ public static class TablesLogic
             }
         }
         Data.TableAccess.WriteAll(tables);
+        Data.Tables = Data.TableAccess.LoadAll();
         return result;
     }
 
@@ -94,6 +95,14 @@ public static class TablesLogic
                 if (customers[i].Tables[j].Id == tableId) return true;
             }
         }
+        return false;
+    }
+
+    public static bool TypeIdCheck(int type, int id)
+    {
+        Table? table = Data.Tables.Find(x => x.Id == id);
+        if (table == null) throw new Exception("TypeIdCheck went wrong");
+        if (table.Type == type) return true;
         return false;
     }
 }

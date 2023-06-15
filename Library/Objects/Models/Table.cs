@@ -18,4 +18,10 @@ public class Table : IHasID
         Type = type;
         IsAvailable = true;
     }
+
+    public bool Equals(Table? t)
+    {
+        if (t == null) return false;
+        return Id == t.Id && Type == t.Type && IsAvailable == t.IsAvailable;
+    }
 }

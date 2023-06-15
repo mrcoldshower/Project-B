@@ -64,8 +64,8 @@ public static class AlgorithmLogic
 
     public static Dictionary<Reservation, List<int>>? AlgorithmReturnTables(Reservation reservation)
     {
+        if (reservation == null) return null;
         List<Reservation> reservations = Data.Reservations.Where(x => x.Time == reservation.Time).ToList(); // Linq
-        reservations.Add(reservation);
         reservations.Sort((x, y) => y.QuantityPeople.CompareTo(x.QuantityPeople));
         Restaurant restaurant = Data.Restaurant;
         int currentTwoPT = restaurant.TwoPersonTables;

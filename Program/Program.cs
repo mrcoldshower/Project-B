@@ -4,6 +4,7 @@ public class Program
 {
     public static void Main()
     {
+        ReservationLogic.RemoveOldReservations(); // Removes reservations from json that are more than 1 month old
         Console.CursorVisible = false;
         Admin();
     }
@@ -24,7 +25,9 @@ public class Program
 
     public static void Waiter()
     {
-
+        WaiterHomePage homePage = new();
+        Router.PushPage(homePage);
+        Router.ViewCurrentPage();
     }
 
     public static void RealMain(string[] args)

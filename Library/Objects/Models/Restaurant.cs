@@ -24,9 +24,12 @@ public class Restaurant : IHasName
     [JsonPropertyName("barChairs")]
     public int BarChairs { get; set; }
 
+    [JsonPropertyName("aboutDescription")]
+    public string AboutDescription { get; set; }
 
 
-    public Restaurant(string name, TimeOnly openTime, TimeOnly closeTime, int twoPersonTables, int fourPersonTables, int sixPersonTables, int barChairs)
+
+    public Restaurant(string name, TimeOnly openTime, TimeOnly closeTime, int twoPersonTables, int fourPersonTables, int sixPersonTables, int barChairs, string aboutDescription)
     {
         Name = name;
         OpenTime = openTime;
@@ -35,6 +38,7 @@ public class Restaurant : IHasName
         FourPersonTables = fourPersonTables;
         SixPersonTables = sixPersonTables;
         BarChairs = barChairs;
+        AboutDescription = aboutDescription;
     }
 
     public override string ToString()

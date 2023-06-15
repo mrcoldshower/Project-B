@@ -25,6 +25,7 @@ public class DismissCustomerPage : Page
         Utils.Debug($"Total price: {totalPrice}");
         CustomerLogic.DismissCustomer(tableId);
         Utils.Debug("Customer successfully dismissed.");
+        Router.GoBack();
     }
 
     public (bool, string) AreValidInputs(string[] options)

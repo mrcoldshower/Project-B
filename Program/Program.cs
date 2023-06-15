@@ -6,7 +6,7 @@ public class Program
     {
         ReservationLogic.RemoveOldReservations(); // Removes reservations from json that are more than 1 month old
         Console.CursorVisible = false;
-        Admin();
+        Customer();
     }
 
     public static void Customer()

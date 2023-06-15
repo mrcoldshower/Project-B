@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "Id": 1,
+    "Name": "meatball",
+    "Price": 2.0,
+    "Description": "a",
+    "Category": 0
+  }
+]

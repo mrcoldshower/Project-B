@@ -29,7 +29,7 @@ public class SeeMenuCardPage : Page
             }
             else if (keyInfo.Key == ConsoleKey.Escape)
             {
-                break;
+                Router.GoBack();
             }
         }
         

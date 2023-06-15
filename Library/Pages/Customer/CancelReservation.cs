@@ -8,7 +8,6 @@ public class CancelReservationPage : Page
         string[] options = new string[] { "Email:", "Reservation Code:", "[Cancel Reservation]" };
         int choice = Navigate("Cancel a reservation:", options);
         bool filled = AreQuestionsFilled(options);
-        Utils.Debug(this.ToString()!);
         if (filled == false)
         {
             Utils.Debug("The user has not filled in all the required input fields yet.");

@@ -40,9 +40,4 @@ public class Program
         Router.PushPage(homePage);
         Router.ViewCurrentPage();
     }
-
-    public static void RealMain(string[] args)
-    {
-
-    }
 }

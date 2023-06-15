@@ -48,15 +48,5 @@
     "PhoneNumber": "09",
     "Email": "@.",
     "ReservationCode": "W0YDF"
-  },
-  {
-    "Id": 6,
-    "QuantityPeople": 5,
-    "Date": "2023-06-17",
-    "Time": "18:00:00",
-    "Name": "P",
-    "PhoneNumber": "02",
-    "Email": "@.",
-    "ReservationCode": "M6U8F"
   }
 ]

@@ -24,7 +24,6 @@ public class ChangeAboutPage : Page
             else aboutDescription += QuestionsAnswers[options[i]] + "\n";
         }
         RestaurantLogic.ChangeAboutDescription(aboutDescription);
-        Console.WriteLine(aboutDescription);
         Utils.Debug("About description successfully changed!");
         Router.GoBack();
     }

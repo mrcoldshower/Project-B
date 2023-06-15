@@ -65,15 +65,15 @@
   {
     "Id": 10,
     "Name": "Spaghetti",
-    "Price": 10.0,
-    "Description": "good",
-    "Category": 3
+    "Price": 10.99,
+    "Description": "Italian specialy",
+    "Category": 2
   },
   {
     "Id": 11,
-    "Name": "Spaghetti",
+    "Name": "Pablo",
     "Price": 10.0,
-    "Description": "god",
-    "Category": 3
+    "Description": "lol",
+    "Category": 1
   }
 ]

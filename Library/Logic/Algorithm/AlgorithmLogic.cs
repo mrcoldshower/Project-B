@@ -24,7 +24,7 @@ public static class AlgorithmLogic
             while (currentSixPT > 0 && currentQuantity >= 5)
             {
                 if (currentSixPT * 6 + currentFourPT * 4 + currentTwoPT * 2 - currentQuantity < 0 && currentQuantity > 6) break;
-                currentSixPT -= 1;
+                currentSixPT--;
                 if (currentQuantity == 5) currentQuantity -= 5;
                 else currentQuantity -= 6;
                 ReservationTables[reservations[i]].Add(6);
@@ -32,7 +32,7 @@ public static class AlgorithmLogic
             while (currentFourPT > 0 && currentQuantity >= 3)
             {
                 if (currentFourPT * 4 + currentTwoPT * 2 - currentQuantity < 0 && currentQuantity > 4) break;
-                currentFourPT -= 1;
+                currentFourPT--;
                 if (currentQuantity == 3) currentQuantity -= 3;
                 else currentQuantity -= 4;
                 ReservationTables[reservations[i]].Add(4);
@@ -40,16 +40,16 @@ public static class AlgorithmLogic
             while (currentTwoPT > 0 && currentQuantity >= 1 && !ReservationTables[reservations[i]].Contains(1)) // does have other tables
             {
                 if (currentTwoPT * 2 - currentQuantity < 0 && currentQuantity > 2) break;
-                currentTwoPT -= 1;
-                if (currentQuantity == 1) currentQuantity -= 1;
+                currentTwoPT--;
+                if (currentQuantity == 1) currentQuantity--;
                 else currentQuantity -= 2;
                 ReservationTables[reservations[i]].Add(2);
             }
             while (currentBarChair > 0 && currentQuantity >= 1 && !new[] { 2, 4, 6 }.Any(x => ReservationTables[reservations[i]].Contains(x))) // no other type tables, so can only choose barchairs type
             {
                 if (currentBarChair - currentQuantity < 0) break;
-                currentBarChair -= 1;
-                currentQuantity -= 1;
+                currentBarChair--;
+                currentQuantity--;
                 ReservationTables[reservations[i]].Add(1);
             }
             // Console.Write($"{currentQuantity}| ");

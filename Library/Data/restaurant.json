@@ -1,10 +1,10 @@
 {
-  "Name": "Andrej",
-  "OpenTime": "16:00:00",
-  "CloseTime": "20:00:00",
+  "Name": "Andrej's restaurant",
+  "OpenTime": "15:00:00",
+  "CloseTime": "22:00:00",
   "TwoPersonTables": 8,
   "FourPersonTables": 5,
-  "SixPersonTables": 2,
+  "SixPersonTables": 3,
   "BarChairs": 10,
-  "AboutDescription": "Welcome to our online reservation program!\nThis program was made by 4 students of Hogeschool Rotterdam Informatica\nDevelopers: Pablo, Daniel, Harold, Ying yu\n:)\n"
+  "AboutDescription": "This is a restaurant\nTest\nTest\nHello\n"
 }

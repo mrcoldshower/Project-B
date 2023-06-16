@@ -21,6 +21,7 @@ public class OrderFoodPage : Page
             Display(); return;
         }
         List<Food> chosenFood = new();
+        Console.CursorVisible = true;
         while (true)
         {
             Food dish = (Food)SearchLogic.SearchItem(Data.Foods);
@@ -35,14 +36,9 @@ public class OrderFoodPage : Page
             }
             if (input == "n") break;
         }
-        Console.Clear();
-        // Console.WriteLine("Selected dishes for ordering");
-        // foreach (var item in chosenFood)
-        // {
-        //     Console.WriteLine(item.ToString()!);
-        // }
         OrderLogic.PlaceOrder(chosenFood, int.Parse(QuestionsAnswers["Table ID:"]));
-        Console.WriteLine("Order has been placed");
+        Utils.Debug("Order has been placed");
+        Console.CursorVisible = false;
         Router.GoBack();
     }
 

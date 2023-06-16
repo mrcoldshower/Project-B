@@ -103,6 +103,7 @@ public class ChooseTablePage : Page
                 }
             }
         }
+        Console.CursorVisible = true;
         Console.WriteLine("Choose a table for the customer:\n");
         for (int i = 0; i < selectedTables.Count; i++)
         {

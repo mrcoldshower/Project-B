@@ -131,17 +131,12 @@ public static class AlgorithmLogic
 
         foreach (TimeOnly existingBooking in existingBookings)
         {
-            if (suggestions.Count >= 4)
-                break;
-
             TimeOnly previousSlot = existingBooking.AddHours(-1);
             TimeOnly nextSlot = existingBooking.AddHours(1);
+            reservation.Time = existingBooking;
 
-            if (previousSlot >= openingTime && !suggestions.Contains(previousSlot) && previousSlot != reservation.Time && AlgorithmIsPossible(reservation))
-                suggestions.Add(previousSlot);
-
-            if (nextSlot <= closingTime && !suggestions.Contains(nextSlot) && nextSlot != reservation.Time && AlgorithmIsPossible(reservation))
-                suggestions.Add(nextSlot);
+            if (existingBooking >= openingTime && existingBooking < closingTime && existingBooking != pickedTimeSlot && AlgorithmIsPossible(reservation))
+                suggestions.Add(existingBooking);
         }
 
         suggestions.Sort();

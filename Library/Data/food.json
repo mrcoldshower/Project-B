@@ -8,10 +8,10 @@
   },
   {
     "Id": 2,
-    "Name": "Shicken Breast",
+    "Name": "Sushi",
     "Price": 6.99,
-    "Description": "Boneless and skinless chicken breast",
-    "Category": 1
+    "Description": "Sushi plate",
+    "Category": 3
   },
   {
     "Id": 3,
@@ -58,22 +58,8 @@
   {
     "Id": 9,
     "Name": "Eggplant Parmesan",
-    "Price": 10.49,
+    "Price": 20.0,
     "Description": "Breaded and baked eggplant topped with tomato sauce and cheese",
-    "Category": 2
-  },
-  {
-    "Id": 10,
-    "Name": "Spaghetti",
-    "Price": 10.99,
-    "Description": "Italian specialy",
-    "Category": 2
-  },
-  {
-    "Id": 11,
-    "Name": "Pablo",
-    "Price": 10.0,
-    "Description": "lol",
-    "Category": 1
+    "Category": 3
   }
 ]

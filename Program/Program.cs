@@ -4,19 +4,20 @@ public class Program
 {
     public static void Main(string[] args)
     {
+        // ReservationLogic.FillTodayWithTestReservations(12, new TimeOnly(18, 0));
         ReservationLogic.RemoveOldReservations(); // Removes reservations from json that are more than 1 month old
         Console.CursorVisible = false;
         if (args.Length == 0)
         {
-            Console.WriteLine("No arguments provided. Use one of the following: Customer, Admin, Waiter.");
+            Console.WriteLine("No arguments provided. Use one of the following: customer, admin, waiter.");
             return;
         }
 
-        switch (args[0])
+        switch (args[0].ToLower())
         {
-            case "Customer": Customer(); break;
-            case "Admin": Admin(); break;
-            case "Waiter": Waiter(); break;
+            case "customer": Customer(); break;
+            case "admin": Admin(); break;
+            case "waiter": Waiter(); break;
         }
     }
 

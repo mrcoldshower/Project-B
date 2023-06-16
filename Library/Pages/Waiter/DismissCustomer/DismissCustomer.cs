@@ -21,7 +21,7 @@ public class DismissCustomerPage : Page
             Display(); return;
         }
         int tableId = int.Parse(QuestionsAnswers["Table ID:"]);
-        double totalPrice = OrderLogic.GetTotalPrice(tableId);
+        double totalPrice = Math.Round(OrderLogic.GetTotalPrice(tableId), 2);
         Utils.Debug($"Total price: {totalPrice}");
         CustomerLogic.DismissCustomer(tableId);
         Utils.Debug("Customer successfully dismissed.");

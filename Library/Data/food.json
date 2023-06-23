@@ -57,9 +57,9 @@
   },
   {
     "Id": 9,
-    "Name": "Eggplant Parmesan",
-    "Price": 20.0,
-    "Description": "Breaded and baked eggplant topped with tomato sauce and cheese",
+    "Name": "Spaghetti",
+    "Price": 12.0,
+    "Description": "good pasta",
     "Category": 3
   }
 ]

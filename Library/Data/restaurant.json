@@ -4,7 +4,7 @@
   "CloseTime": "22:00:00",
   "TwoPersonTables": 8,
   "FourPersonTables": 5,
-  "SixPersonTables": 3,
+  "SixPersonTables": 2,
   "BarChairs": 10,
-  "AboutDescription": "This is a restaurant\nTest\nTest\nHello\n"
+  "AboutDescription": "About Page!\nDevelopers: Pablo, Harold, Ying-Yu, Daniel\n\nLocatie: Wijnhaven\n"
 }

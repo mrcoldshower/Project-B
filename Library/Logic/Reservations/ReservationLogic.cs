@@ -52,6 +52,7 @@ public static class ReservationLogic
         List<Reservation> reservations = Data.ReservationAccess.LoadAll();
         reservations.Remove(reservation);
         Data.ReservationAccess.WriteAll(reservations);
+        Data.Reservations = reservations;
     }
 
     public static List<Reservation> TodaysReservations()
